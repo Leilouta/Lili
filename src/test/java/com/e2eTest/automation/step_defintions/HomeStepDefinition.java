@@ -30,10 +30,8 @@ public class HomeStepDefinition {
 		
 		PageHome.geBouttonSearch().click();
 
-		
 	}
-	
-	
+
 	
 	@Then("je verifie que la liste s'affiche avec le user correspondant")
 	public void jeVerifieQueLaListeSAfficheAvecLeUserCorrespondant() {
