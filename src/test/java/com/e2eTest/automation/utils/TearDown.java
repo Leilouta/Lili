@@ -17,11 +17,11 @@ public class TearDown {
 	public void quitDriver(Scenario scenario) {
 
 		if (scenario.isFailed()) {
-			final byte[] screenshot = ((TakesScreenshot) Setup.getdriver()).getScreenshotAs(OutputType.BYTES);
+			final byte[] screenshot = ((TakesScreenshot) Setup.getDriver()).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "screenshoot");
 		}
 
-		Setup.getdriver().quit();
+		Setup.getDriver().quit();
 		Setup.getLogger().error("Scenario:" + scenario.getName() + "-finishedStatus" + scenario.getStatus());
 	}
 
